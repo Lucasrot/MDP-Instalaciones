@@ -1,0 +1,434 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400");
+
+*,
+*::before,
+*::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* ================= VARIABLE ================ */
+:root {
+    --primary-color: hsl(9, 94%, 61%);
+    --primary-color-alt: hsl(28, 72%, 83%);
+    --second-color: #3e537c;
+    --second-color-alt: hsla(220, 33%, 36%, 65%);
+    --third-color: hsl(220, 36%, 28%);
+    --white-color: #fbfbfb;
+    --white-color-alt: hsl(12, 14%, 93%);
+    --dark-color: hsl(300, 100%, 0%);
+}
+
+/* ================= BASE ==================== */
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+.bx {
+    font-size: 2.5rem;
+}
+
+.container {
+    padding: 0 2rem;
+}
+
+/* -- BODY -- */
+body {
+    font-family: "Raleway", sans-serif;
+    font-size: 1rem;
+    background-color: var(--white-color);
+}
+
+/* ================= HEADER ================ */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--dark-color);
+    padding: 1rem 2rem;
+
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 2;
+}
+
+.company-logo {
+    font-size: 2.5rem;
+    background: -webkit-linear-gradient(120deg,
+            var(--primary-color-alt),
+            var(--primary-color));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.nav-items {
+    display: flex;
+}
+
+.nav-item {
+    margin: 0 2rem;
+}
+
+.nav-link {
+    font-size: 1.1rem;
+    letter-spacing: 0.05rem;
+    position: relative;
+    background: -webkit-linear-gradient(var(--primary-color-alt),
+            var(--primary-color));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.nav-link::before {
+    content: "";
+    background: linear-gradient(var(--primary-color), var(--primary-color-alt));
+    width: 100%;
+    height: 0.05rem;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 150ms;
+}
+
+.nav-link:hover::before {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+.menu-toggle {
+    display: none;
+}
+
+.bx-menu,
+.bx-x {
+    cursor: pointer;
+    background: -webkit-linear-gradient(120deg,
+            var(--primary-color-alt),
+            var(--primary-color));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: none !important;
+}
+
+@media screen and (max-width: 768px) {
+
+    /* ================= HEADER ================ */
+    header {
+        padding: 0.5rem 1rem;
+    }
+
+    .navbar {
+        background-color: var(--dark-color);
+        position: absolute;
+        top: 3.5rem;
+        right: 0;
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        transform: scaleY(0);
+        transform-origin: bottom;
+        transition: transform 500ms;
+    }
+
+    .show-navbar {
+        display: flex;
+        transform: scaleY(1);
+        transform-origin: top;
+        transition: transform 300ms;
+    }
+
+    .nav-items {
+        display: flex;
+        flex-direction: column;
+        font-size: 1.3rem
+    }
+
+    .nav-item {
+        margin: 0.5rem 0;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .bx-menu {
+        display: block !important;
+    }
+
+    .show-bx {
+        display: block !important;
+    }
+
+    .hide-bx {
+        display: none !important;
+    }
+}
+
+/* =============== FOOTER =============== */
+.top-footer {
+    display: flex;
+    flex-direction: row;
+    background: -webkit-linear-gradient(90deg, var(--dark-color), var(--primary-color));
+    align-content: center;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.footer-title {
+    font-weight: 500;
+    font-size: 1.2rem;
+    padding: 1rem 0;
+    background-color: var(--dark-color);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.footer-items h3 {
+    cursor: pointer;
+    font-weight: 300;
+    font-size: 1.1rem;
+    padding: 0.1rem 0;
+    color: var(--white-color-alt);
+}
+
+.footer-items h3:hover {
+    text-decoration: underline;
+}
+
+.footer-items h3:last-child {
+    padding-bottom: 1rem;
+}
+
+/* =============== FOOTER copyright  =============== */
+.end-footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--dark-color);
+}
+
+.copyright {
+    color: var(--white-color-alt);
+    padding: 1rem 0;
+    font-size: 0.9rem;
+}
+
+.copyright b {
+    font-weight: inherit;
+    font-size: 0.9rem;
+}
+
+.designer {
+    color: hsla(0, 0%, 98%, 0.541);
+    padding-bottom: 0.5rem;
+    font-size: 0.9rem;
+}
+
+.designer:hover {
+    text-decoration: underline;
+}
+/*facebook nuevo*/
+.wrapper {
+    display: inline-flex;
+    list-style: none;
+}
+.wrapper .icon {
+    position: relative;
+    background: #ffffff;
+    border-radius: 50%;
+    padding: 15px;
+    margin: 10px;
+    width: 50px;
+    height: 50px;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+.fab {
+    font-size: 1em;
+}
+.wrapper .tooltip {
+    position: absolute;
+    top: 0;
+    font-size: 14px;
+    background: #ffffff;
+    color: #ffffff;
+    padding: 5px 8px;
+    border-radius: 5px;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+.wrapper .tooltip::before {
+    position: absolute;
+    content: "";
+    height: 8px;
+    width: 8px;
+    background: #ffffff;
+    bottom: -3px;
+    left: 50%;
+    transform: translate(-50%) rotate(45deg);
+    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+.wrapper .icon:hover .tooltip {
+    top: -45px;
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+.wrapper .icon:hover span,
+.wrapper .icon:hover .tooltip {
+    text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.1);
+}
+.wrapper .facebook:hover,
+.wrapper .facebook:hover .tooltip,
+.wrapper .facebook:hover .tooltip::before {
+    background: #1877F2;
+    color: #ffffff;
+}
+
+/* =============== FOOTER =============== */
+.top-footer {
+    flex-direction: row;
+    justify-content: space-around;
+    padding-bottom: 8rem;
+    padding-top: 2rem;
+    background: -webkit-linear-gradient(90deg,
+            var(--dark-color),
+            var(--primary-color));
+}
+
+.footer-title {
+    font-size: 1.2rem;
+    padding: 0.5rem 0;
+    color: black
+}
+
+.footer-items h3 {
+    font-size: 0.9rem;
+}
+
+.end-footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--dark-color);
+}
+
+.copyright {
+    color: hsla(0, 0%, 98%, 0.747);
+    padding: 1rem 0;
+    font-size: 0.8rem;
+}
+
+.copyright b {
+    font-size: 0.7rem;
+}
+
+.designer {
+    color: hsla(0, 0%, 98%, 0.322);
+    font-size: 0.8rem;
+}
+
+
+
+
+/* =============== Section politica de la empresa =============== */
+
+section {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    padding: 8rem 7% 1px 7%;
+}
+
+
+h1 {
+    font-size: 4em;
+    font-family: sans-serif;
+    position: relative;
+    background: rgb(#f0f8ff);
+    color: rgb(0, 0, 0);
+    overflow: hidden;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+span {
+    font-size: 2em;
+    font-family: sans-serif;
+    position: relative;
+    background: rgb(#f0f8ff);
+    color: rgb(0, 0, 0);
+    overflow: hidden;
+    text-align: center;
+}
+
+h1:before {
+    content: '';
+    display: block;
+    position: absolute;
+    -webkit-filter: blur(20px);
+    filter: blur(20px);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    mix-blend-mode: screen;
+    background-image: repeating-linear-gradient(-45deg, transparent, transparent 1em, #9E2053 1em, rgb(162, 99, 4) 50%), repeating-linear-gradient(45deg, #111626, #111626 1em, pink 1em, #4f3d13 50%);
+    background-size: 3em 3em, 2em 2em;
+    animation-name: ani;
+    animation-duration: 10s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes ani {
+    from {
+        background-position: 0 0;
+    }
+
+    to {
+        background-position: 400% 0;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    h1 {
+        font-size: 3em;
+    }
+
+    section {
+        padding: 135px 7% 20px 7%;
+    }
+}
+
+/**/
