@@ -7,18 +7,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="https://kit.fontawesome.com/c842f7269e.css" crossorigin="anonymous">
+    <link rel="icon" href="./img/Logo1.png">
     <link rel="stylesheet" href="./style/style.css">
     <meta name="description"
         content="En nuestra tienda online encontrarás las mejores opciones en heladeras, exhibidores, estanterías y paneras para equipar tu negocio. Ofrecemos productos de alta calidad y un servicio de instalación profesional. ¡Visítanos ahora!">
     <meta name="keywords" content="heladeras, exhibidores, estanterías, paneras, instalación comercial, tienda online">
-    <title>MDP Instalaciones</title>
+    <title>Instalaciones MDP</title>
 </head>
 
 <body>
     <header>
         <div class="company-logo">
             <a class="logo" href="#Home">
-                <p>MDP Instalaciones</p>
+                <p>Instalaciones MDP</p>
             </a>
         </div>
         <nav class="navbar">
@@ -84,7 +85,7 @@
         <section class="container section-2 section-appear" id="Nosotros">
             <!-- offer 1 -->
             <div class="offer offer-1">
-                <img src="./img/logo.png" alt="a computer in dark with with white shadow" class="foto-nosotros">
+                <img src="./img/Logo1.png" alt="a computer in dark with with white shadow" class="foto-nosotros">
                 <div class="offer-description offer-desc-1">
                     <h2 class="offer-title">Nosotros</h2>
                     <p class="offer-hook">Somos una empresa especializada en instalaciones comerciales.
@@ -140,7 +141,8 @@
             <!-- product - 1 -->
             <div class="product product-1">
                 <a href="./productos/producto4.html">
-                    <img src="./img/Exhibidor de Facturas EX18STD.jpg" alt="Exhibidor de Facturas EX18STD" class="product-img">
+                    <img src="./img/Exhibidor de Facturas EX18STD.jpg" alt="Exhibidor de Facturas EX18STD"
+                        class="product-img">
                     <span class="product_add_cart">VER MODELOS</span>
                 </a>
             </div>
@@ -201,30 +203,31 @@
                 </section>
                 <section class="info_items">
                     <p><span class="fa fa-envelope"></span> info.contact@gmail.com</p>
-                    <p><span><i class="fa-brands fa-whatsapp"></i></span> queti Importa 0002</p>
+                    <a href="https://wa.me/+5492235523190" class="telefono">
+                        <p><span><i class="fa-brands fa-whatsapp"></i></span>+5492235523190</p>
+                    </a>
                 </section>
             </section>
 
-            <form action="" class="form_contact">
+            <form class="form_contact" action="https://formspree.io/f/mdovzvyb" method="POST">
                 <h2>Envía un mensaje</h2>
                 <div class="user_info">
                     <label for="names">Nombres *</label>
-                    <input type="text" id="names">
+                    <input type="text" name="names" id="names">
 
                     <label for="phone">Teléfono / Celular</label>
-                    <input type="text" id="phone">
+                    <input type="text" name="phone" id="phone">
 
                     <label for="email">Correo electronico *</label>
-                    <input type="text" id="email">
+                    <input type="text" id="email" name="email" required>
 
                     <label for="mensaje">Mensaje *</label>
-                    <textarea id="mensaje"></textarea>
+                    <textarea name="mesage" id="mensaje" required></textarea>
 
-                    <input type="button" value="Enviar Mensaje" id="btnSend">
+                    <input type="submit" value="Enviar Mensaje" id="btnSend" class="mensaje1">
                 </div>
             </form>
         </section>
-
     </main>
     <footer>
         <div class="container top-footer">
@@ -282,7 +285,7 @@
         </div>
         <div class="container end-footer">
             <div class="copyright">copyright © 2023 • Todos los derechos reservados | <b>Lucasrot1@hotmail.com</b></div>
-            <a class="designer" href="#Home">MDP Instalaciones</a>
+            <a class="designer" href="#Home">Instalaciones MDP</a>
         </div>
     </footer>
     <script src="https://kit.fontawesome.com/c842f7269e.js" crossorigin="anonymous"></script>
