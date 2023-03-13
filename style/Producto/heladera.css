@@ -50,6 +50,7 @@ body {
 }
 
 /* ------------- HEADER ------------- */
+/* Navbar para dispositivos de escritorio */
 header {
     display: flex;
     align-items: center;
@@ -64,7 +65,7 @@ header {
 }
 
 .company-logo {
-    font-size: 3.5rem;
+    font-size: 2.5rem;
     background: -webkit-linear-gradient(120deg,
             var(--primary-color-alt),
             var(--primary-color));
@@ -123,46 +124,21 @@ header {
     display: none !important;
 }
 
-/* =============== MEDIA QUERIES ======= */
-
-@media screen and (max-width: 768px) {
-    .container {
-        padding: 0 1rem;
-    }
-
-    /* ================= HEADER ================ */
-    header {
-        padding: 0.5rem 1rem;
-    }
-
-    .navbar {
-        background-color: var(--dark-color);
-        position: absolute;
-        top: 3.5rem;
-        right: 0;
-        width: 100%;
-        height: 100vh;
-        display: flex;
-        justify-content: center;
-        transform: scaleY(0);
-        transform-origin: bottom;
-        transition: transform 500ms;
-    }
-
-    .show-navbar {
-        display: flex;
-        transform: scaleY(1);
-        transform-origin: top;
-        transition: transform 300ms;
-    }
-
+/* Navbar para dispositivos móviles */
+@media only screen and (max-width: 768px) {
     .nav-items {
-        display: flex;
+        display: none;
         flex-direction: column;
+        position: absolute;
+        top: 5rem;
+        left: 0;
+        width: 100%;
+        background-color: var(--dark-color);
+        padding: 2rem 0;
     }
 
     .nav-item {
-        margin: 0.5rem 0;
+        margin: 1rem 0;
     }
 
     .menu-toggle {
@@ -173,12 +149,12 @@ header {
         display: block !important;
     }
 
-    .show-bx {
-        display: block !important;
+    .bx-x {
+        display: none !important;
     }
 
-    .hide-bx {
-        display: none !important;
+    .nav-toggle:checked+.nav-items {
+        display: flex;
     }
 }
 
@@ -248,11 +224,13 @@ header {
 .designer:hover {
     text-decoration: underline;
 }
+
 /*facebook nuevo*/
 .wrapper {
     display: inline-flex;
     list-style: none;
 }
+
 .wrapper .icon {
     position: relative;
     background: #ffffff;
@@ -270,6 +248,7 @@ header {
     cursor: pointer;
     transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
+
 .wrapper .tooltip {
     position: absolute;
     top: 0;
@@ -283,6 +262,7 @@ header {
     pointer-events: none;
     transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
+
 .wrapper .tooltip::before {
     position: absolute;
     content: "";
@@ -294,16 +274,19 @@ header {
     transform: translate(-50%) rotate(45deg);
     transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
+
 .wrapper .icon:hover .tooltip {
     top: -45px;
     opacity: 1;
     visibility: visible;
     pointer-events: auto;
 }
+
 .wrapper .icon:hover span,
 .wrapper .icon:hover .tooltip {
     text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.1);
 }
+
 .wrapper .facebook:hover,
 .wrapper .facebook:hover .tooltip,
 .wrapper .facebook:hover .tooltip::before {

@@ -547,25 +547,6 @@ form.form_contact textarea{
   min-width: 100%;
   max-height: 90px;
 }
-/*
-form.form_contact input[type="button"]{
-  width: 180px;
-background: #4091EC;
-padding: 10px;
-border: none;
-border-radius: 25px;
-
-  align-self: flex-end;
-
-  color: #fff;
-font-family: 'Open sans';
-font-size: 16px;
-font-weight: 600;
-cursor: pointer;
-}
-form.form_contact input[type="button"]:hover{
-  background: #000000;
-}
 /**/
 .mensaje1{
   padding: 10px;
@@ -602,7 +583,6 @@ form.form_contact input[type="button"]:hover{
     width: 100%;
     }
 }
-
 
 /* =============== FOOTER =============== */
 .top-footer {
