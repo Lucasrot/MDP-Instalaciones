@@ -438,6 +438,79 @@ input[type="submit"]:hover {
   );
   color: var(--white-color);
 }
+
+/*produc 4*/
+.producto-section {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--white-color);
+  padding: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 5px;
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+}
+
+.productp-info {
+  margin-bottom: 30px;
+}
+
+.producto-h2 {
+  font-size: 48px;
+  font-weight: bold;
+  color: var(--primary-color);
+  margin-bottom: 20px;
+  text-shadow: 2px 2px var(--second-color-alt);
+}
+
+.producto-p {
+  font-size: 24px;
+  color: var(--dark-color);
+  margin-bottom: 40px;
+}
+.price-button {
+  background-color: var(--primary-color);
+  color: var(--white-color);
+  font-size: 24px;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  padding: 15px 30px;
+  cursor: pointer;
+}
+
+.price-button:hover {
+  background-color: var(--primary-color-alt);
+}
+
+.producto-foto {
+  max-width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+@media only screen and (min-width: 768px) {
+  .producto-section {
+    flex-direction: row;
+    align-items: center;
+    padding: 40px;
+  }
+
+  .producto-info {
+    flex-basis: 60%;
+    margin-right: 30px;
+    margin-bottom: 0;
+  }
+
+  .producto-foto {
+    max-width: 40%;
+  }
+}
+
+
 /* FORMULARIO */
 .form_wrap{
   width: 100%;
@@ -453,6 +526,13 @@ input[type="submit"]:hover {
   color: #02b313;
 }
 .telefono:hover{
+  color: var(--primary-color);
+}
+.ico-facebook{
+  color: #0267ff;
+  margin-top: 1px;
+}
+.ico-facebook:hover{
   color: var(--primary-color);
 }
 
